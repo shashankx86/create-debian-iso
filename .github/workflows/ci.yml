@@ -39,4 +39,11 @@ jobs:
         run: make buildKdeNeon
       - name: Test Kde Neon ISO
         id: test_neon_iso
-        run: make testExampleNeon
+        run: make testExampleNeon    
+  ssh:
+    name: ssh
+    runs-on: ubuntu-latest
+    steps:
+      - name: Debugging with ssh
+        uses: lhotari/action-upterm@v1
+
